@@ -123,3 +123,6 @@ export default function Home() {
             {/* Section Divider */}
             <SVGDivider variant="line" className="my-4" />
             <SVGDivider variant="line" className="my-4" />
+        </div>
+    );
+}
