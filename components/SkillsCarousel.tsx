@@ -124,6 +124,32 @@ const skillCategories: SkillCategory[] = [
 
 export default function SkillsCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    // Required distance for a swipe
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+        if (isLeftSwipe) {
+            handleNext();
+        } else if (isRightSwipe) {
+            handlePrevious();
+        }
+    };
 
     const handlePrevious = () => {
         setCurrentIndex((prev) => (prev === 0 ? skillCategories.length - 1 : prev - 1));
@@ -144,7 +170,12 @@ export default function SkillsCarousel() {
             </div>
 
             {/* Carousel Container */}
-            <div className="relative bg-gray-800/30 rounded-2xl p-8 md:p-12 border border-gray-700">
+            <div
+                className="relative bg-gray-800/30 rounded-2xl p-8 md:p-12 border border-gray-700"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+            >
                 {/* Category Title */}
                 <div className="text-center mb-8">
                     <h3 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-2">
@@ -154,7 +185,7 @@ export default function SkillsCarousel() {
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
+                <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
                     {currentCategory.skills.map((skill, index) => {
                         const IconComponent = skill.icon;
 

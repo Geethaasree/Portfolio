@@ -18,7 +18,7 @@ export default function Home() {
                         <div className="space-y-6">
                             <p className="text-sm text-gray-400 animate-fadeIn">Hello, I'm</p>
 
-                            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight animate-textReveal">
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight animate-textReveal min-h-[1.2em]">
                                 Koneru Geethaa Sree
                             </h1>
 
@@ -46,17 +46,17 @@ export default function Home() {
                             </div>
 
                             {/* Stats Section */}
-                            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-700">
-                                <div className="animate-fadeIn animation-delay-800">
-                                    <div className="text-4xl font-bold text-white mb-1">3+</div>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-700">
+                                <div className="animate-fadeIn animation-delay-800 text-center sm:text-left">
+                                    <div className="text-3xl md:text-4xl font-bold text-white mb-1">3+</div>
                                     <div className="text-sm text-gray-400">Projects Completed</div>
                                 </div>
-                                <div className="animate-fadeIn animation-delay-1000">
-                                    <div className="text-4xl font-bold text-white mb-1">6+</div>
+                                <div className="animate-fadeIn animation-delay-1000 text-center sm:text-left">
+                                    <div className="text-3xl md:text-4xl font-bold text-white mb-1">11+</div>
                                     <div className="text-sm text-gray-400">Certifications</div>
                                 </div>
-                                <div className="animate-fadeIn animation-delay-1200">
-                                    <div className="text-4xl font-bold text-white mb-1">2</div>
+                                <div className="animate-fadeIn animation-delay-1200 text-center sm:text-left">
+                                    <div className="text-3xl md:text-4xl font-bold text-white mb-1">2</div>
                                     <div className="text-sm text-gray-400">Awards Won</div>
                                 </div>
                             </div>

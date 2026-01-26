@@ -41,7 +41,7 @@ export default function ProjectLayout({
             <div className="max-w-[1100px] mx-auto px-6 py-16 pointer-events-auto">
                 {/* Header - Full Width */}
                 <div className="mb-12">
-                    <h1 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                         {title}
                     </h1>
                     <p className="text-xl text-gray-300 leading-relaxed">

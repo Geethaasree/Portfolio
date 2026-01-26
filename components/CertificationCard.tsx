@@ -43,7 +43,7 @@ export default function CertificationCard({
             </div>
 
             {/* Title */}
-            <h4 className="text-xl font-bold text-white mb-3 min-h-[56px] leading-tight group-hover:text-blue-400 transition-colors duration-300">
+            <h4 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 min-h-[auto] md:min-h-[56px] leading-tight group-hover:text-blue-400 transition-colors duration-300">
                 {title}
             </h4>
 
