@@ -78,14 +78,14 @@ export default function SocialSidebar() {
             {/* Get In Touch Button - Always visible at the BOTTOM (when isVisible is true) */}
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] hover:scale-110 active:scale-95 transition-all duration-500 animate-pulse-bounce ${isExpanded ? 'bg-gradient-to-r from-purple-500 to-pink-500 rotate-180' : 'bg-gradient-to-r from-blue-500 to-cyan-500 rotate-0'
+                className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] hover:scale-110 active:scale-95 transition-all duration-500 animate-pulse-bounce ${isExpanded ? 'bg-gradient-to-r from-purple-500 to-pink-500 rotate-180' : 'bg-gradient-to-r from-blue-500 to-cyan-500 rotate-0'
                     }`}
                 title="Get In Touch"
             >
                 {isExpanded ? (
-                    <span className="text-2xl md:text-3xl text-white font-bold leading-none">×</span>
+                    <span className="text-xl md:text-2xl text-white font-bold leading-none">×</span>
                 ) : (
-                    <span className="text-[9px] md:text-[10px] font-black text-white text-center leading-[1] px-1 tracking-tighter uppercase drop-shadow-lg">Get in<br />Touch</span>
+                    <span className="text-[8px] md:text-[9px] font-black text-white text-center leading-[1] px-1 tracking-tighter uppercase drop-shadow-lg">Get in<br />Touch</span>
                 )}
             </button>
         </div>

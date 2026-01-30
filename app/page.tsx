@@ -419,12 +419,12 @@ export default function Home() {
 
                             <ScrollAnimationWrapper threshold={0.1} delay={400}>
                                 <CertificationCard
-                                    logo="/AICTE.webp"
+                                    logo="/571a.webp"
                                     title="Cloud Computing Workshop"
                                     issuer="IIT Hyderabad"
                                     year="2024"
                                     pdfUrl="/IIT Hyderabad Cloud Workshop.pdf"
-                                    logoSize={60}
+                                    logoSize={70}
                                 />
                             </ScrollAnimationWrapper>
                         </div>
